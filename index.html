@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Web - Mis Aficiones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+        }
+        nav a {
+            margin: 0 10px;
+            color: #007BFF;
+            text-decoration: none;
+        }
+        section {
+            padding: 2em;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .gif {
+            width: 200px;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenido a Mi Web</h1>
+    <nav>
+        <a href="#seccion1">Mis Hobbies</a>
+        <a href="#seccion2">Galería</a>
+        <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Portada</h2>
+    <img src="https://via.placeholder.com/600x300" alt="Imagen de portada">
+    <p>Explora mis pasatiempos favoritos, descubre música que me gusta y mira mis vídeos preferidos.</p>
+    <a href="#seccion1" class="button">Ir a Mis Hobbies</a>
+    <a href="#seccion2" class="button">Ir a Galería</a>
+</section>
+
+<section id="seccion1">
+    <h2>Mis Hobbies</h2>
+    <p>Me encanta la fotografía, la música y los videojuegos.</p>
+    <img src="https://via.placeholder.com/400x200" alt="Foto de hobby">
+    <p>Escucha mi música favorita:</p>
+    <audio controls>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+</section>
+
+<section id="seccion2">
+    <h2>Galería y Multimedia</h2>
+    <p>Mira este vídeo que me gusta:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <p>Y aquí un gif animado:</p>
+    <img src="https://media.giphy.com/media/l0HlTy9x8FZo0XO1i/giphy.gif" class="gif" alt="Gif animado">
+</section>
+
+<footer>
+    <p>© 2025 Mi Web</p>
+    <p>Visitas: <span id="visitas">0</span></p>
+</footer>
+
+<script>
+    // Contador de visitas simple (solo local, para ejemplo)
+    if (localStorage.visitas) {
+        localStorage.visitas = Number(localStorage.visitas) + 1;
+    } else {
+        localStorage.visitas = 1;
+    }
+    document.getElementById('visitas').innerText = localStorage.visitas;
+</script>
+
+</body>
+</html>
